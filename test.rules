@@ -1,0 +1,2 @@
+alert tcp any any -> any 3399 (content:"login"; content:"Initial"; flowbits:set,first_packet_found;)
+alert tcp any any -> any 3399 (msg:"bot founded";content:"123.45.6.7:8080"; flowbits:isset,first_packet_found;)
